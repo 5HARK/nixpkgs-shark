@@ -5,13 +5,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gnome-shell-extension-paperwm";
-  version = "38.2";
+  version = "gnome-42";
 
   src = fetchFromGitHub {
     owner = "paperwm";
     repo = "PaperWM";
-    rev = finalAttrs.version;
-    hash = "sha256-Unhz2+MOygOog6B5sOLtYTpdeodQH+/CMI93gC5nDvI=";
+    rev = "gnome-42";
+    hash = "sha256-HuqSp6NM9Ye9SyQT+il5Cn4FsSxnT6CAlA/NjwBkajo=";
   };
 
   dontConfigure = true;
