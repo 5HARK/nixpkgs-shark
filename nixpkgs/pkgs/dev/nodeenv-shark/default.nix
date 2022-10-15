@@ -1,4 +1,5 @@
-{ stdenv
+{ lib
+, stdenv
 , pythonPackages }:
 
 pythonPackages.buildPythonPackage rec {
@@ -15,7 +16,7 @@ pythonPackages.buildPythonPackage rec {
   doCheck = false;
   propagatedBuildInputs = with pythonPackages; [ setuptools ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Node.js virtual environment builder";
     homepage = https://github.com/ekalinin/nodeenv;
     license = licenses.bsd3;
